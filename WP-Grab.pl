@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 #WordPress Grab Info
-#Coded By Mohamed Riahi 08/020/2017
+#Coded By Mohamed Riahi 08/20/2017
 #don't Change my Fucking Rights
 
 #[Detect User]
