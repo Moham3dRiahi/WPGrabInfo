@@ -9,8 +9,9 @@
 #[Detect Theme]  
 #[Detect Plugins]
 
-use LWP::UserAgent;
+use if $^O eq "MSWin32", Win32::Console::ANSI;
 use Term::ANSIColor;
+use LWP::UserAgent;
 use HTTP::Request::Common qw(GET);
 use URI::URL;
 use Getopt::Long;
