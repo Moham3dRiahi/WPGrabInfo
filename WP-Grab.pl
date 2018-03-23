@@ -48,7 +48,10 @@ print q(
      Coded BY Mohamed Riahi        \\
                                     '
 );
-print "  [+] $site\n";
+  print color('bold red')," [";
+  print color('bold green'),"+";
+  print color('bold red'),"] ";
+  print color('bold white'),"$site\n";
 user();
 Version();
 Theme();
@@ -56,7 +59,7 @@ Plugin();
 }
 
 sub help() {
-print " Usage: perl WP-Grab.pl -u http://website.com/";
+print color('bold white')," Usage: perl WP-Grab.pl -u http://website.com/";
 }
 #################### GET USER ####################
 sub user(){
@@ -64,9 +67,15 @@ $user = $site . '/?author=1';
 
 $getuser = $ua->get($user)->content;
 if($getuser =~/author\/(.*?)\//){
-print "  [-] User: $1\n";
+  print color('bold red')," [";
+  print color('bold green'),"+";
+  print color('bold red'),"] ";
+  print color('bold white'),"User: $1\n";
 }else{
-print "  [-] Can't Get Username\n";
+  print color('bold red')," [";
+  print color('bold green'),"+";
+  print color('bold red'),"] ";
+  print color('bold white'),"Can't Get Username\n";
 }
 }
 
@@ -74,9 +83,15 @@ print "  [-] Can't Get Username\n";
 sub Version(){
 $getversion = $ua->get($site)->content;
 if($getversion =~/content="WordPress (.*?)"/) {
-print "  [-] Version: $1\n";
+  print color('bold red')," [";
+  print color('bold green'),"+";
+  print color('bold red'),"] ";
+  print color('bold white'),"Version: $1\n";
 }else{
-print "  [-] Can't Get Version\n";
+  print color('bold red')," [";
+  print color('bold green'),"+";
+  print color('bold red'),"] ";
+  print color('bold white'),"Can't Get Version\n";
 }
 }
 
@@ -84,9 +99,15 @@ print "  [-] Can't Get Version\n";
 sub Theme(){
 $getheme = $ua->get($site)->content;
 if($getheme =~/\/themes\/(.*?)\//){
-print "  [-] Theme: $1\n";
+  print color('bold red')," [";
+  print color('bold green'),"+";
+  print color('bold red'),"] ";
+  print color('bold white'),"Theme: $1\n";
 }else{
-print "  [-] Can't Get Theme\n";
+  print color('bold red')," [";
+  print color('bold green'),"+";
+  print color('bold red'),"] ";
+  print color('bold white'),"Can't Get Theme\n";
 }
 }
 
@@ -98,6 +119,9 @@ my %seen;
 while($getplugin =~m/\/wp-content\/plugins\/(.*?)\//g){ 
   $plu=$1;
   next if $seen{$plu}++; # already seen
-  print "  [-] Plugin: $plu \n";
+  print color('bold red')," [";
+  print color('bold green'),"+";
+  print color('bold red'),"] ";
+  print color('bold white'),"Plugin: $plu \n";
 }
 }
