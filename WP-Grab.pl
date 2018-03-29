@@ -26,8 +26,6 @@ GetOptions(
 unless ($site) { help(); }
 if ($site) { banner(); }
 
-
-
 sub banner() {
 print q(
            ____                      ,
