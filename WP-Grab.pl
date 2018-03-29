@@ -55,7 +55,7 @@ print q(
   user();
   Version();
   Theme();
-   Plugin();
+  Plugin();
 }
 
 sub help() {
