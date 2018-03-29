@@ -70,12 +70,12 @@ if($getuser =~/author\/(.*?)\//){
   print color('bold green'),"+";
   print color('bold red'),"] ";
   print color('bold white'),"User: $1\n";
-}else{
+   }else{
   print color('bold red')," [";
   print color('bold green'),"+";
   print color('bold red'),"] ";
   print color('bold white'),"Can't Get Username\n";
-}
+  }
 }
 
 #################### GET VERSION ####################
@@ -86,7 +86,7 @@ if($getversion =~/content="WordPress (.*?)"/) {
   print color('bold green'),"+";
   print color('bold red'),"] ";
   print color('bold white'),"Version: $1\n";
-   }else{
+ }else{
   print color('bold red')," [";
   print color('bold green'),"+";
   print color('bold red'),"] ";
