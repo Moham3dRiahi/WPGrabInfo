@@ -86,12 +86,12 @@ if($getversion =~/content="WordPress (.*?)"/) {
   print color('bold green'),"+";
   print color('bold red'),"] ";
   print color('bold white'),"Version: $1\n";
-}else{
+   }else{
   print color('bold red')," [";
   print color('bold green'),"+";
   print color('bold red'),"] ";
   print color('bold white'),"Can't Get Version\n";
-}
+ }
 }
 
 #################### GET THEME ####################
