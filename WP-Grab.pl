@@ -52,15 +52,16 @@ print q(
   print color('bold green'),"+";
   print color('bold red'),"] ";
   print color('bold white'),"$site\n";
-user();
-Version();
-Theme();
-Plugin();
+  user();
+  Version();
+  Theme();
+   Plugin();
 }
 
 sub help() {
 print color('bold white')," Usage: perl WP-Grab.pl -u http://website.com/";
 }
+
 #################### GET USER ####################
 sub user(){
 $user = $site . '/?author=1';
@@ -108,7 +109,7 @@ if($getheme =~/\/themes\/(.*?)\//){
   print color('bold green'),"+";
   print color('bold red'),"] ";
   print color('bold white'),"Can't Get Theme\n";
-}
+ }
 }
 
 #################### GET PLUGINs ####################
@@ -123,5 +124,5 @@ while($getplugin =~m/\/wp-content\/plugins\/(.*?)\//g){
   print color('bold green'),"+";
   print color('bold red'),"] ";
   print color('bold white'),"Plugin: $plu \n";
-}
+ }
 }
